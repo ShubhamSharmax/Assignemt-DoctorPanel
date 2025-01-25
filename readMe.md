@@ -30,4 +30,12 @@ As per the assignment requirements, I have created a **Doctor Profile Panel** th
 - **CSS** for styling and responsiveness
 - **JavaScript** for dynamic interactivity and modal functionality.
 
+---
+
+## Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ShubhamSharmax/Assignemt-DoctorPanel
+   ```
+2. Open `index.html` in any modern browser.
 
