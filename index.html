@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor's Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">       
+      <div class="docPanel">
+        <h1>Doctor Profile Panel</h1>
+        <hr>
+        <div class="profile">
+          <div class="profilePhoto">
+            <img src="img/profile.jpg" alt="profilephoto" srcset="" />
+          </div>
+          <div class="profileInfo">
+            <h1>Dr. Ujjwal Singhal</h1>
+            <h2>Neurosurgeon</h2>
+            <h4>MBBS,M.Ch (Neurosurgery)</h4>
+          </div>
+        </div>
+        <div class="about">
+            <h3>About</h3>
+            <p>here we can add a small introduction of doctor ( Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate accusantium exercitationem, ad alias nulla illo aspernatur, sapiente at ut repellat nisi veritatis ab natus eligendi perferendis adipisci quos? Cumque distinctio voluptas quibusdam, tempora vero est id odit soluta quae, molestias alias rem a ab dolore! )</p>
+        </div>
+        <div class="appointment">
+            <button id="bookAppointment">Make An Appointment</button>
+        </div>
+        <div class="availability">
+          <h3>Availability & Time Slots</h3>
+          <ul class="time-slots" id="timeSlots">
+            <!-- timeslots come from JavaScript -->
+          </ul>
+        </div>
+      </div>
+      <div id="appointmentModal" class="modal hidden">
+        <div class="modalContent">
+            <h3>Select a Time Slot</h3>
+            <select id="timeSlotDropdown">
+                <option value="" disabled selected>Select a time slot</option>
+            </select>
+            <button id="confirmAppointment" disabled>Confirm Appointment</button>
+            <button id="closeModal">Cancel</button>
+        </div>
+    </div> 
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

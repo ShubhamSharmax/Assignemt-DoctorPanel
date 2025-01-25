@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.docPanel {
+  margin-top: 10px;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+.docPanel h1 {
+  font-size: 2rem;
+  color: #333;
+}
+.docPanel hr {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+.profile {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.profilePhoto img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.profileInfo h1 {
+  font-size: 1.5rem;
+  color: #222;
+}
+.profileInfo h2 {
+  font-size: 1.2rem;
+  color: #555;
+}
+.profileInfo h4 {
+  font-size: 1rem;
+  color: #777;
+}
+.about {
+  width: 100%;
+}
+.about h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+.about p {
+  text-align: justify;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+.availability {
+  width: 100%;
+}
+.availability h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+.time-slots {
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+.time-slots li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.time-slots li:hover {
+  background: #e7f3ff;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.appointment button {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.appointment button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+.modalContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.modalContent select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.modalContent button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.modalContent button#confirmAppointment {
+  background: #007bff;
+  color: white;
+  transition: background 0.3s;
+}
+.modalContent button#confirmAppointment:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.modalContent button#confirmAppointment:hover:enabled {
+  background: #0056b3;
+}
+.modalContent button#closeModal {
+  background: #f5f5f5;
+  color: #333;
+  transition: background 0.3s;
+}
+.modalContent button#closeModal:hover {
+  background: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .profilePhoto img {
+    height: 150px;
+    width: 150px;
+  }
+  .profileInfo h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+      .docPanel h1 {
+        font-size: 1.5rem;
+      }
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profilePhoto img {
+        height: 120px;
+        width: 120px;
+      }
+      .profileInfo h1 {
+        font-size: 1.2rem;
+      }
+      .profileInfo h2, h4 {
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+      .about p {
+        font-size: 1rem;
+      }
+      .availability h3 {
+        font-size: 1.1rem;
+      }
+      .time-slots li {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px;
+      }
+      .appointment button {
+        font-size: 1.2rem;
+      }
+      .modalContent {
+        width: 95%;
+        max-width: 300px;
+      }
+}
